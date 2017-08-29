@@ -16,6 +16,18 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from django.conf import settings
+from django.conf.urls.static import static
+
+from programs.views import show_pws
+from contacts.views import show_contact
+
+
 urlpatterns = [
+#    url(r'^static/(?P<path>.*)$', never_cache(serve_static)),
+
     url(r'^admin/', admin.site.urls),
-]
+    url(r'^$',            show_pws,      name='show_pws'),
+    url(r'^contact/$',    show_contact,  name='show_contact'),   
+
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
