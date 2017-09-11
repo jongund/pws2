@@ -17,10 +17,16 @@ from django.core.exceptions import ObjectDoesNotExist
 from people.models import Person
     
 def create_person(f,l,s):
-  print("  Creating Person: " + f + ' ' + l) 
-  p = Person(first_name=f, last_name=l, suffix=s)
+  try:
+    p = Person.objects.get(first_name=f, last_name=l)
+    print("  Updating Person: " + f + ' ' + l) 
+    p.suffix  = s
+  except ObjectDoesNotExist:
+    print("  Creating Person: " + f + ' ' + l) 
+    p = Person(first_name=f, last_name=l, suffix=s)
   p.save()
   return p
+
   
 
 p = create_person('Tracy', 'Gunderson',  'M.S., CCC-SLP')
