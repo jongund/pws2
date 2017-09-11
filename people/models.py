@@ -22,8 +22,9 @@ class Person(models.Model):
 
   order        = models.IntegerField(default=0)
 
-  description         = models.TextField(null=True,blank=True)
-  description_html    = models.TextField(null=True,blank=True, editable=False)
+  description       = models.TextField(null=True,blank=True)
+  description_html  = models.TextField(null=True,blank=True, editable=False)
+  short_desc_html   = models.CharField(max_length=256, default="",null=True,blank=True)
 
 
   class Meta:
@@ -38,5 +39,6 @@ class Person(models.Model):
 
     if self.description:  
       self.description_html = self.description
+      self.short_desc_html  = self.description[:64]
 
     super(Person, self).save() # Call the "real" save() method.  

@@ -21,7 +21,9 @@ class Program(models.Model):
 
   description       = models.TextField(null=True,blank=True)
   description_html  = models.TextField(null=True,blank=True, editable=False)
-  order             = models.IntegerField(default=0)
+  short_desc_html   = models.CharField(max_length=256, default="",null=True,blank=True)
+
+  order  = models.IntegerField(default=0)
 
   class Meta:
     verbose_name        = "Program"
@@ -35,6 +37,7 @@ class Program(models.Model):
   
     if self.description:  
       self.description_html = self.description
+      self.short_desc_html  = self.description[:64]
             
     super(Program, self).save() # Call the "real" save() method.  
 

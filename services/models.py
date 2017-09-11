@@ -7,11 +7,13 @@ from django.db import models
 class Service(models.Model):
   id = models.AutoField(primary_key=True)
   
-  title             = models.CharField(max_length=256)
+  title  = models.CharField(max_length=256)
+  order  = models.IntegerField(default=0)
 
   description       = models.TextField(null=True,blank=True)
   description_html  = models.TextField(null=True,blank=True, editable=False)
-  order             = models.IntegerField(default=0)
+  short_desc_html   = models.CharField(max_length=256, default="",null=True,blank=True)
+
 
   class Meta:
     verbose_name        = "Service"
@@ -25,5 +27,6 @@ class Service(models.Model):
   
     if self.description:  
       self.description_html = self.description
+      self.short_desc_html  = self.description[:64]
             
     super(Service, self).save() # Call the "real" save() method.  
