@@ -19,15 +19,21 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 
-from programs.views import show_pws
-from contacts.views import show_contact
+from abouts.views import show_home
+from abouts.views import show_contact
+from abouts.views import show_directions
+from abouts.views import show_people
+from abouts.views import show_services
 
 
 urlpatterns = [
 #    url(r'^static/(?P<path>.*)$', never_cache(serve_static)),
 
     url(r'^admin/', admin.site.urls),
-    url(r'^$',            show_pws,      name='show_pws'),
-    url(r'^contact/$',    show_contact,  name='show_contact'),   
+    url(r'^$',             show_home,        name='show_home'),
+    url(r'^contact/$',     show_contact,     name='show_contact'),   
+    url(r'^directions/$',  show_directions,  name='show_directions'),   
+    url(r'^people/$',      show_people,      name='show_people'),   
+    url(r'^services/$',    show_contact,     name='show_services'),   
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

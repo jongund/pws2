@@ -9,10 +9,10 @@ from .models import Program
 # Create your views here.
 
 # -----------------------------------------------------------------------------
-# Services View
+# Program View
 # -----------------------------------------------------------------------------
      
-def show_pws(request):
+def show_programs(request):
 
     user = request.user
     programs = Program.objects.all()

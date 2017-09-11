@@ -1,3 +1,9 @@
 from django.contrib import admin
 
-# Register your models here.
+from programs.models import Program
+
+class ProgramAdmin(admin.ModelAdmin):
+    list_display = ('title', 'order', 'show')
+    
+admin.site.register(Program, ProgramAdmin)
+
