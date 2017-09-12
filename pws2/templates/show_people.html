@@ -4,42 +4,28 @@
 
 <!--content-->
 
-<div class="content"> 
+<div class="content" style="padding-top: 3em;"> 
     <div class="thumb-box3">
         <div class="container">
             <div class="box">
                 <h2>Our Therapists</h2>
                 <div class="row">
+                    {% for p in people %}
                     <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 wow fadeIn" data-wow-delay="0.3s">
                         <div class="thumb-pad1">
-                            <div class="thumbnail">
-                                <figure><img src="{% static 'img/page1_pic1.jpg' %}" alt="" width="25%"></figure>
+                            <div id="id_person{{p.id}}" class="thumbnail">
+                                <figure><img src="{% static p.picture %}" alt="" width="25%"></figure>
                                 <div class="caption">
-                                    <span>Speech and Language Pathologist</span>
-                                    <a href="#">Tracy Gunderson M.S., CCC-SLP</a>
-                                    <p>My inspiration to open Prairie Wind Speech Therapy, Inc. evolved from the requests and dreams of the various families I’ve had the pleasure to collaborate with. I have provided therapy services to both children and adults for over 20 years in many different types of settings, including client homes, community based sites, and school and clinic settings. From early on in my career, my passion has been in working with individuals’ with severe speech impairments and supplementing communication with low and high tech augmentative communication. In addition, I’ve consistently worked with and enjoyed early communicators in the toddler through preschool years.</p>
-
-                                    <p>Most recently I provided clinical instruction and supervision to undergraduate and graduate students at the University of Illinois Department of Speech and Hearing Science. My specialty areas include parent/toddler groups, individuals using low and high tech augmentative communication and children with speech, language and literacy needs in preschool through elementary school.</p>
-
-                                </div>  
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                        <div class="thumb-pad1">
-                            <div class="thumbnail">
-                                <figure><img src="{% static 'img/page1_pic2.jpg' %}" alt=""></figure>
-                                <div class="caption">
-                                    <span>Speech and Language Pathologist</span>
-                                    <a href="#">Cheryl Yepez M.A., CCC-SLP</a>
-                                    <p>As a mother of three, I love working with families and believe the family is the most important factor in a child’s progress and success. In my 14 years’ experience as a bilingual therapist, I have worked in several different settings, including public schools, Early Intervention, and as an independent provider of bilingual speech-language services to our community. My most recent experience has been at the University of Illinois, where I trained graduate students in speech-language pathology. My favorite thing about the Early Intervention system is its focus on family-centered care, and I have built that into my practice at Prairie Wind. It is a joy to me to be able to collaborate with parents and involve them in their children’s therapy. I am also passionate about bilingual therapy. I love working with Spanish-speaking families to help them develop their children’s communication while still supporting their home language.</p>
+                                    <span>{{p.title}}</span>
+                                    {{p.first_name}} {{p.last_name}} {{p.suffix}}</a>
+                                    <p>{{p.description_html}} .....</p>
                                 </div>  
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

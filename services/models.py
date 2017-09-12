@@ -27,6 +27,6 @@ class Service(models.Model):
   
     if self.description:  
       self.description_html = self.description
-      self.short_desc_html  = self.description[:64]
+      self.short_desc_html  = self.description[:128]
             
     super(Service, self).save() # Call the "real" save() method.  
