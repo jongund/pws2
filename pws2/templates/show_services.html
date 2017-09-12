@@ -4,15 +4,36 @@
 
 
 <!--content-->
-<div class="content"> 
+<div class="content" style="padding-top: 4em;"> 
     <div class="thumb-box2">
         <div class="container">
+            <h1 class="title wow fadeIn">Services</h1>
+
+            <div class="row programs">
+                {% for p in programs %}
+                {% if p.show %}
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wow fadeInRight" data-wow-delay="0.2s">
+                    <div class="box maxheight"  >
+                      <h2 id="#id_program{{p.id}}">{{p.title}}</h2>
+                      <div style="text-align: left">
+                      {{p.description_html|safe}}....
+                      </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+
+            <h2 style="margin-top: 2em;">Speech and Language Therapies</h2>
+
             <div class="row programs">
                 {% for s in services %}
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="margin-top: 2em">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" style="margin-bottom: 2em">
                     <div id="id_service{{s.id}}" class="box maxheight">
                       <strong>{{s.title}}</strong>
-                      {{s.description|safe}}
+                      <div style="text-align: left">
+                      {{s.description_html|safe}}
+                      </div>
                     </div>
                 </div>
                 {% endfor %}
@@ -20,7 +41,6 @@
         </div>
     </div>
 </div>    
-
 
 
 {% endblock %}
