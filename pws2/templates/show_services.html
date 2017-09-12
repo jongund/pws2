@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+
+
+<!--content-->
+<div class="content"> 
+    <div class="thumb-box2">
+        <div class="container">
+            <div class="row programs">
+                {% for s in services %}
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="margin-top: 2em">
+                    <div class="box maxheight">
+                      <strong>{{s.title}}</strong>
+                      {{s.description|safe}}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>    
+
+
+
+{% endblock %}
+
+

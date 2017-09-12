@@ -45,6 +45,12 @@ main .programs li {
 <script src="{% static 'js/jquery.mobilemenu.js'        %}"></script>
 <script src="{% static 'js/jquery.equalheights.js'      %}"></script> 
 <script src="{% static 'js/touchTouch.jquery.js'        %}"></script>
+<script src="{% static 'js/TMForm.js'                   %}"></script>
+<script src="{% static 'js/modal.js'                    %}"></script>  
+<script src="{% static 'js/bootstrap-filestyle.js'      %}"></script> 
+<script src="{% static 'js/jquery.ui.totop.js'          %}"></script>
+
+
 
 <script>
    $(window).load(function() {
@@ -82,18 +88,32 @@ main .programs li {
     <header id="stuck_container">
         <div class="container">
             <h1 class="navbar-brand navbar-brand_"><a href="index.html">Prairie Wind Speech Therapy, Inc.</a></h1>
-            <nav class="navbar navbar-default navbar-static-top tm_navbar clearfix" role="navigation">
+            <nav class="navbar navbar-default navbar-static-top tm_navbar clearfix">
                 <ul class="nav sf-menu clearfix">
-                    <li class="active"><a href="{% url 'show_home' %}">Home</a></li>
-                    <li><a href="{% url 'show_people' %}">Therapists</a></li>
-                    <li><a href="{% url 'show_services' %}">Services</a></li>
+                    <li><a href="{% url 'show_home'       %}">Home</a></li>
+                    <li><a href="{% url 'show_people'     %}">Therapists</a></li>
+                    <li><a href="{% url 'show_services'   %}">Services</a></li>
                     <li><a href="{% url 'show_directions' %}">Directions</a></li>
-                    <li><a href="{% url 'show_contact' %}">Contact</a></li>
+                    <li><a href="{% url 'show_contact'    %}">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 </div>
+
+<script>
+var links = document.querySelectorAll('.navbar-static-top a');
+
+for (var i = 0; i < links.length; i++) {
+  var link = links[i];
+  console.log(link.href + ' ' + window.location.href);
+  if (link.href == window.location.href) {
+    link.parentNode.classList.add('active');
+    break;
+  }
+}
+
+</script>
 
 <main>
 {% block content %}
@@ -104,9 +124,8 @@ main .programs li {
 <!--footer-->
 <footer>
     <div class="container">
-        <p>Happy Land &copy; <em id="copyright-year"></em> All Rights Reserved <br><span>|</span> <a href="index-5.html">Privacy Policy</a></p>
+        <p>{{businessinfo.business_title}} &copy; <em id="copyright-year"></em> All Rights Reserved <br><span></p>
     </div>
-  More Day Care Templates at <a rel="nofollow" href="http://www.templatemonster.com/category.php?category=178&type=1" target="_blank">TemplateMonster.com</a>
 </footer>
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
 <script src="{% static 'js/tm-scripts.js' %}"></script>

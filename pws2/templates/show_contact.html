@@ -2,142 +2,54 @@
 
 {% block content %}
 
-  <div class="row">
-  
-  <div class="col-md-2">
-    <div id="id_page_nav" class="nav-sidebar">
-      <ul class="nav">
-        <li><a href="#id_phone_fax">Phone and Fax</a></li>
-        <li><a href="#id_form">Request Form</a></li>
-      </ul>
+<div class="content indent">
+    <div class="container">
+        <h2>Contact form</h2>
+            <form id="contact-form">
+              <div class="contact-form-loader"></div>
+              <fieldset>
+                <label class="name form-div-1">
+                  <input type="text" name="name" placeholder="Name" value="" data-constraints="@Required @JustLetters"  />
+                  <span class="empty-message">*This field is required.</span>
+                  <span class="error-message">*This is not a valid name.</span>
+                </label>
+                <label class="phone form-div-2">
+                  <input type="text" name="phone" placeholder="Phone" value="" data-constraints="@JustNumbers" />
+                  <span class="empty-message">*This field is required.</span>
+                  <span class="error-message">*This is not a valid phone.</span>
+                </label>
+                <label class="email form-div-3">
+                  <input type="text" name="email" placeholder="Email" value="" data-constraints="@Required @Email" />
+                  <span class="empty-message">*This field is required.</span>
+                  <span class="error-message">*This is not a valid email.</span>
+                </label>
+                <label class="message form-div-4">
+                  <textarea name="message" placeholder="Message" data-constraints='@Required @Length(min=20,max=999999)'></textarea>
+                  <span class="empty-message">*This field is required.</span>
+                  <span class="error-message">*The message is too short.</span>
+                </label>
+                <!-- <label class="recaptcha"><span class="empty-message">*This field is required.</span></label> -->
+                <div class="btns">
+                    <a href="#" data-type="submit" class="btn-default btn1" data-text="Send">Send</a>
+                </div>
+              </fieldset> 
+              <div class="modal fade response-message">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      <h4 class="modal-title">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+                      You message has been sent! We will be in touch soon.
+                    </div>      
+                  </div>
+                </div>
+              </div>
+        </form>
     </div>
-  </div> 
-    
-  <div class="col-md-9">
+</div>
 
-    <h1>{{title}}</h1>
-  
-    <h2 id="id_phone_fax">Phone and Fax</h2>
-    <div>Phone: {{bus_info.phone}}</div>
-    <div>FAX: {{bus_info.fax}}</div>
-    
-    
-    <h2 id="id_form">Information Request Form</h2>
-
-    <form action="{{post_url}}" method="post"  name="pws_login">
-    {% csrf_token %}
-
-    <div class="input">
-      <label for="id_first">{{form.first_name.label}}  (required)</label>
-      <div class="error">
-        <input 
-            id="id_first"
-            name="{{form.first_name.name}}"
-            type="text"
-            required
-            value="{{form.first_name.value}}"
-            {% if form.first_name.errors|length %}aria-invalid="true"{% endif %}
-            size="20"/> 
-        {% if form.url.errors|length %}
-        <label class="error" for="id_first">{% for error in form.first_name.errors %}{{error}}{% endfor %}</label>
-        {% endif %}
-      </div>
-    </div>
-
-    <div class="input">
-      <label for="id_last">{{form.last_name.label}} (required)</label>
-      <div class="error">
-        <input 
-            id="id_last"
-            name="{{form.last_name.name}}"
-            type="text" 
-            required
-            value="{{form.last_name.value}}"
-            {% if form.last_name.errors|length %}aria-invalid="true"{% endif %}
-            size="30"/> 
-        {% if form.last_name.errors|length %}
-        <label class="error" for="id_last">{% for error in form.last_name.errors %}{{error}}{% endfor %}</label>
-        {% endif %}
-      </div>
-    </div>
-
-    <div class="input">
-      <label for="id_phone">{{form.phone.label}}</label>
-      <div class="error">
-        <input 
-            id="id_phone"
-            type="phone" 
-            name="{{form.phone.name}}"
-            value="{{form.phone.value}}"
-            {% if form.phone.errors|length %}aria-invalid="true"{% endif %}
-            size="30"/> 
-        {% if form.phone.errors|length %}
-        <label class="error" for="id_phone">{% for error in form.phone.errors %}{{error}}{% endfor %}</label>
-        {% endif %}
-      </div>
-    </div>
-
-    <div class="input">
-      <label for="id_email">{{form.email.label}}</label>
-      <div class="email">
-        <input 
-            id="id_email"
-            type="email" 
-            name="{{form.email.name}}"
-            value="{{form.email.value}}"
-            {% if form.email.errors|length %}aria-invalid="true"{% endif %}
-            size="30"/> 
-        {% if form.email.errors|length %}
-        <label class="error" for="id_email">{% for error in form.email.errors %}{{error}}{% endfor %}</label>
-        {% endif %}
-      </div>
-    </div>
-
-    <div class="input" style="position: absolute; top: -30em; left: -300em;">
-      <label for="id_email2">{{form.email2.label}}</label>
-      <div class="error">
-        <input
-            id="id_email2"
-            type="text" 
-            name="{{form.email2.name}}"
-            value="{{form.email2.value}}"
-            {% if form.email.errors|length %}aria-invalid="true"{% endif %}
-            size="30"/> 
-        {% if form.email2.errors|length %}
-        <label class="error" for="id_email2">{% for error in form.email2.errors %}{{error}}{% endfor %}</label>
-        {% endif %}
-      </div>
-    </div>
-
-
-    <div class="input">
-      <label for="id_option1">{{form.option1.label}}</label>
-      <div class="error">
-      {{form.option1}}
-      </div>
-    </div>
-    
-    <div class="input">
-      <label for="id_option2">{{form.option2.label}}</label>
-      <div class="error">
-      {{form.option2}}
-      </div>
-    </div>
-
-    <div class="input">
-      <label for="id_comment">{{form.comment.label}}</label>
-      <div class="error">
-      {{form.comment}}
-      </div>
-    </div>
-    
-    
-    <input id="id_submit" name="submit" type="submit" value="Submit" title="You must enter a first, last and phone number before you can request a report"/>
-    
-    </form>
-    
-  </div>
-  </div>
   
 
 {% endblock %}

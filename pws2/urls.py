@@ -34,6 +34,6 @@ urlpatterns = [
     url(r'^contact/$',     show_contact,     name='show_contact'),   
     url(r'^directions/$',  show_directions,  name='show_directions'),   
     url(r'^people/$',      show_people,      name='show_people'),   
-    url(r'^services/$',    show_contact,     name='show_services'),   
+    url(r'^services/$',    show_services,    name='show_services'),   
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
