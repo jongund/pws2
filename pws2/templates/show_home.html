@@ -5,30 +5,19 @@
 <div class="thumb-box1">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 wow fadeInLeft" data-wow-delay="0.2s">
+            <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
                 <div class="box">
-                    <figure><img src="{% static 'img/page1_icon1.png' %}" alt=""></figure>
                     <div class="extra-wrap">
-                        <a href="#">Early Childhood</a>
-                        <p>6 months to 3 years</p>
+                        <a href="{% url 'show_services' %}#id_free">Free Consultation</a>
+                        <p>{{businessinfo.phone}}</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 wow fadeInLeft" data-wow-delay="0.1s">
+            <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
                 <div class="box">
-                    <figure><img src="{% static 'img/page1_icon2.png' %}" alt=""></figure>
                     <div class="extra-wrap">
-                        <a href="#">Pre-school</a>
-                        <p>4 to 5 years</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 wow fadeInLeft">
-                <div class="box">
-                    <figure><img src="{% static 'img/page1_icon3.png' %}" alt=""></figure>
-                    <div class="extra-wrap indent">
-                        <a href="#">Grade School</a>
-                        <p>5 years and older</p>
+                        <a href="{% url 'show_services' %}#id_flex">Flexible Scheduling</a>
+                        <p>We work with your family schedule</p>
                     </div>
                 </div>
             </div>
@@ -39,9 +28,8 @@
 <div class="content"> 
     <div class="thumb-box2">
         <div class="container">
-            <h1 class="title wow fadeIn">Communication is the Connection</h1>
+            <h1 class="title wow fadeIn">Communication is Connection</h1>
             <p class="description wow fadeIn">Serving Champaign-Urbana and the surrounding communities.</p>
-            <p class="title wow fadeIn">Call for Free Consultation <a href="tel:1-217-355-5905">(217) 355-5905</a></p>
 
             <div class="row programs">
                 {% for p in programs %}
@@ -58,11 +46,14 @@
             </div>
 
             <div class="row programs">
+                <h2>What Makes Us Special?</h2>
                 {% for s in services %}
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-delay="0.2s" style="margin-top: 2em">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-delay="0.2s" style="margin-top: 2em">
                     <div class="box maxheight">
-                      <a href="{% url 'show_services' %}#id_service{{s.id}} "><strong>{{s.title}}</strong>
-                      {{s.short_desc_html|safe}}....
+                      <strong>{{s.title}}</strong>
+                      <p>{{s.short_desc_html|safe}}....</p>
+                      <a href="{% url 'show_services' %}#id_service{{s.id}} "class="btn-default btn1" data-text="Read More">
+                      Read More <span class="sr-only"> about {{s.title}}</span>
                       </a>
                     </div>
                 </div>
@@ -107,28 +98,28 @@
 
         <div class="thumb-box6">
             <div class="container">
-                <h2>Our Place</h2>
+                <h2>Come Visit Our Office</h2>
                 <div class="row">
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
-                        <figure class="wow zoomIn" data-wow-delay="0.1s"><a href="{% static 'img/office-1-sm.jpg' %}"><i></i><img src="{% static 'img/office-1-sm.jpg' %}" alt=""></a></figure>
+                        <figure class="wow zoomIn" data-wow-delay="0.1s"><img src="{% static 'img/office-1-sm.jpg' %}" alt=""></figure>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
-                        <figure class="wow zoomIn"><a href="{% static 'img/office-2-sm.jpg' %}"><i></i><img src="{% static 'img/office-2-sm.jpg' %}" alt=""></a></figure>
+                        <figure class="wow zoomIn"><img src="{% static 'img/office-2-sm.jpg' %}" alt=""></figure>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
-                        <figure class="wow zoomIn"><a href="{% static 'img/office-3-sm.jpg' %}"><i></i><img src="{% static 'img/office-3-sm.jpg' %}" alt=""></a></figure>
+                        <figure class="wow zoomIn"><img src="{% static 'img/office-3-sm.jpg' %}" alt=""></figure>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
-                        <figure class="wow zoomIn" data-wow-delay="0.1s"><a href="{% static 'img/office-4-sm.jpg' %}"><i></i><img src="{% static 'img/office-4-sm.jpg' %}" alt=""></a></figure>
+                        <figure class="wow zoomIn" data-wow-delay="0.1s"><img src="{% static 'img/office-4-sm.jpg' %}" alt=""></figure>
                     </div>    
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
-                        <figure class="wow zoomIn" data-wow-delay="0.1s"><a href="{% static 'img/office-5-sm.jpg' %}"><i></i><img src="{% static 'img/office-5-sm.jpg' %}" alt=""></a></figure>
+                        <figure class="wow zoomIn" data-wow-delay="0.1s"><img src="{% static 'img/office-5-sm.jpg' %}" alt=""></figure>
                     </div>    
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
-                        <figure class="wow zoomIn" data-wow-delay="0.1s"><a href="{% static 'img/office-6-sm.jpg' %}"><i></i><img src="{% static 'img/office-6-sm.jpg' %}" alt=""></a></figure>
+                        <figure class="wow zoomIn" data-wow-delay="0.1s"><img src="{% static 'img/office-6-sm.jpg' %}" alt=""></figure>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
-                        <figure class="wow zoomIn" data-wow-delay="0.1s"><a href="{% static 'img/office-7-sm.jpg' %}"><i></i><img src="{% static 'img/office-7-sm.jpg' %}" alt=""></a></figure>
+                        <figure class="wow zoomIn" data-wow-delay="0.1s"><img src="{% static 'img/office-7-sm.jpg' %}" alt=""></figure>
                     </div>
                 </div>
             </div>

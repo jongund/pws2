@@ -10,17 +10,39 @@
             <h1 class="title wow fadeIn">Services</h1>
 
             <div class="row programs">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wow fadeInRight" data-wow-delay="0.2s">
+                    <div class="box" >
+                      <h2 id="id_free">Free Consultation</h2>
+                      <div style="text-align: left">
+We offer an initial free consult prior to beginning therapy. The consult lasts about 20 minutes and gives us a chance to get to know each other and to learn more about your concerns for your child. Come in and meet our staff of talented therapists! Call today to set up your free consult.
+                      </div>
+                    </div>  
+                </div>
+            </div>            
+
+            <div class="row programs" style="margin-top: 2em">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wow fadeInLeft" data-wow-delay="0.2s">
+                    <div class="box" >
+                      <h2 id="id_flex">Flexible Scheduling</h2>
+                      <div style="text-align: left">
+We realize that families’ schedules often change from month to month. We work with you and do our best to accommodate your busy lifestyle. This might mean flexible appointments or therapy in your child’s school or daycare. At Prairie Wind, you are not locked in to a rigid schedule. Call today and let’s talk about how we can work with you.
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row programs" style="margin-top: 2em">
                 {% for p in programs %}
                 {% if p.show %}
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wow fadeInRight" data-wow-delay="0.2s">
-                    <div class="box maxheight"  >
+                    <div class="box"  >
                       <h2 id="#id_program{{p.id}}">{{p.title}}</h2>
                       <div style="text-align: left">
                       {{p.description_html|safe}}....
                       </div>
                     </div>
                 </div>
-                {% endif %}
+                {% endif  %}
                 {% endfor %}
             </div>
 
@@ -38,8 +60,15 @@
                 </div>
                 {% endfor %}
             </div>
+
+
+ 
+
+
+
         </div>
     </div>
+
 </div>    
 
 
