@@ -8,14 +8,16 @@
             <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
                 <div class="box">
                     <div class="extra-wrap">
+                        <figure><img src="{% static 'img/phone2_small.png' %}" alt=""></figure>                    
                         <a href="{% url 'show_services' %}#id_free">Free Consultation</a>
-                        <p>{{businessinfo.phone}}</p>
+                        <p>Call us at <a href="tel:{{businessinfo.phone_href}}" style="font-size: 100%">{{businessinfo.phone}}</a> to schedule an appointment</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
+            <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.1s">
                 <div class="box">
                     <div class="extra-wrap">
+                        <figure><img src="{% static 'img/schedule_small.png' %}" alt=""></figure>                    
                         <a href="{% url 'show_services' %}#id_flex">Flexible Scheduling</a>
                         <p>We work with your family schedule</p>
                     </div>
@@ -83,7 +85,7 @@
                                     <div class="caption">
                                         <span>{{p.title}}</span>
                                         <a href="{% url 'show_people' %}#id_person{{p.id}}">{{p.first_name}} {{p.last_name}} {{p.suffix}}</a>
-                                        <p>{{p.short_desc_html}} .....</p>
+                                        <p>{{p.short_desc_html|safe}} .....</p>
                                     </div>  
                                 </div>
                             </div>

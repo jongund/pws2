@@ -1,4 +1,5 @@
 from django.db import models
+from utils import text_to_html
 
 # Create your models here.
 
@@ -41,6 +42,6 @@ class BusinessInformation(models.Model):
   def save(self):
 
     if self.directions:  
-      self.directions_html =self.directions
+      self.directions_html = text_to_html(self.directions)
             
     super(BusinessInformation, self).save() # Call the "real" save() method. 

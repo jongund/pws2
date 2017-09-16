@@ -32,18 +32,17 @@ def create_person(f,l,s):
 p = create_person('Tracy', 'Gunderson',  'M.S., CCC-SLP')
 p.order = 1
 p.title = 'Speech and Language Pathologist'
-p.picture = "img/page1_pic1.jpg"
+p.picture = "img/tracy.png"
 p.description = """
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non hendrerit ante, quis mollis neque. Proin non lacus quis eros pulvinar sollicitudin. Praesent nunc est, pellentesque nec nibh a, consectetur iaculis mi. Duis mauris augue, tempus quis hendrerit ac, mattis ut ligula. In interdum magna nec nisl ullamcorper congue. Curabitur vitae sollicitudin tortor. Phasellus quis dictum tortor, in mattis dolor. Suspendisse id suscipit ligula. Aenean pulvinar felis nisl, eu hendrerit nisl gravida ac. Integer a mi rutrum, fringilla mauris ac, vulputate felis. 
-"""
+My inspiration to open Prairie Wind Speech Therapy, Inc. evolved from the requests and dreams of the various families I’ve had the pleasure to collaborate with. I have provided therapy services to both children and adults for over 20 years in many different types of settings, including client homes, community based sites, and school and clinic settings. From early on in my career, my passion has been in working with individuals’ with severe speech impairments and supplementing communication with low and high tech augmentative communication. In addition, I’ve consistently worked with and enjoyed early communicators in the toddler through preschool years.
+Most recently I provided clinical instruction and supervision to undergraduate and graduate students at the University of Illinois Department of Speech and Hearing Science. My specialty areas include parent/toddler groups, individuals using low and high tech augmentative communication and children with speech, language and literacy needs in preschool through elementary school."""
 p.save()
    
 p = create_person('Cheryl', 'Yepez', 'M.A., CCC-SLP')
 p.order = 1
 p.title = 'Speech and Language Pathologist'
-p.picture = "img/page1_pic2.jpg"
+p.picture = "img/cheryl.png"
 p.description = """
-Nam vel dictum augue. Nam id molestie ipsum. Donec nec nunc eget purus auctor tristique sagittis quis lacus. Nulla ultricies posuere cursus. Proin viverra justo et ligula feugiat, in fringilla erat blandit. Nulla magna orci, tristique eget lectus et, suscipit semper massa. Maecenas gravida euismod turpis non viverra. Proin ante magna, vulputate vitae libero sit amet, malesuada pulvinar erat. Vivamus et massa ut nisi commodo lacinia ac et quam. In nec tellus arcu. Aenean eget dolor vitae libero faucibus ornare. Vivamus tellus ipsum, sodales nec finibus eget, dapibus vitae ligula. Proin tristique finibus odio, vitae ornare velit malesuada in. Suspendisse vel pellentesque nibh. Cras dignissim egestas mi. 
-"""
+As a mother of three, I love working with families and believe the family is the most important factor in a child’s progress and success. In my 14 years’ experience as a bilingual therapist, I have worked in several different settings, including public schools, Early Intervention, and as an independent provider of bilingual speech-language services to our community. My most recent experience has been at the University of Illinois, where I trained graduate students in speech-language pathology. My favorite thing about the Early Intervention system is its focus on family-centered care, and I have built that into my practice at Prairie Wind. It is a joy to me to be able to collaborate with parents and involve them in their children’s therapy. I am also passionate about bilingual therapy. I love working with Spanish-speaking families to help them develop their children’s communication while still supporting their home language."""
 p.save()
 

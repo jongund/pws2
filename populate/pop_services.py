@@ -26,44 +26,51 @@ def create_service(title, order):
     s = Service(title=title, order=order, description="")
   s.save()
   return s
+
     
-s = create_service('Augmentative and Alternative Communication (AAC)', 1)  
-s.menu = "AAC"
+s = create_service('Late Talkers', 1)  
 s.description = """
-Nullam congue tellus et dui hendrerit, ac facilisis augue pellentesque. In tincidunt, risus eget congue pretium, lacus nisl pretium lectus, quis convallis arcu odio et risus. Phasellus commodo volutpat lorem, eu iaculis metus hendrerit in. Etiam pulvinar commodo dui. In posuere augue a quam cursus pretium. Sed suscipit eu metus eu sagittis. Curabitur mollis mi eleifend, imperdiet metus et, varius risus. Vivamus imperdiet consequat est, sed pulvinar dui fringilla eu. Cras a ipsum non diam volutpat aliquam ac eget est. Quisque ultrices lobortis volutpat. Integer quis turpis in enim egestas mattis. Fusce ipsum neque, iaculis nec tempus ut, pulvinar in mi. Phasellus bibendum augue turpis, eget gravida turpis aliquet in. Vestibulum aliquam diam vel massa aliquam, venenatis ornare leo ultricies. Mauris tortor nulla, aliquam in sagittis non, pharetra sit amet sem. """
+Are you concerned because your toddler isn’t talking? Can you count the number of words your 2-year-old understands? If the answer is yes, your child may be a late talker. When children under the age of three have language delays, communication at home often looks a lot like pointing and grunting. Our therapists have many years of experience understanding and working with toddlers and families. We believe parents and caregivers are an integral part of the therapy process, and we welcome the chance to work with you.
+"""
 s.save()
 
-s = create_service('Bilingual Therapy', 2)  
+s = create_service('Speech', 2)  
 s.menu = "Bilingual"
 s.description = """
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at ante sit amet tortor porta tempus at in ipsum. Sed quis porta urna. Nullam et dapibus ligula. Vivamus volutpat dui felis, vel suscipit lorem semper ut. Fusce tincidunt lacus a ligula ultricies, non eleifend mauris aliquam. Vestibulum fringilla lorem at neque bibendum porttitor. Suspendisse quis eleifend neque. Nulla quis semper sem, auctor pharetra est. Fusce fringilla lorem purus, quis posuere quam vehicula in. Nulla facilisi. Praesent ornare, urna sit amet mattis tristique, ex risus tristique libero, ac luctus lorem felis id dolor. Curabitur eget dui sed leo volutpat pellentesque. In feugiat libero nulla, eu gravida eros finibus nec. Sed sed nisl et lorem ullamcorper aliquet vitae id metus. Fusce iaculis, est et egestas aliquet, mi nisl ultricies ligula, ut efficitur justo metus quis quam. Nulla volutpat euismod tortor, at eleifend odio gravida ac. """
+Is your child’s speech hard to understand? Do people often say “What?” or ask him to repeat himself?  Does your child stutter?   We can help your child communicate more effectively.  Full evaluations are available, as well as therapy for articulation, phonology, apraxia of speech and stuttering.
+"""
 s.save()
 
-s = create_service('Receptive/Expressive Language Difficulties', 3)  
+s = create_service('Autism Spectrum Disorder', 3)  
 s.menu = "Receptive/Expressive"
 s.description = """
-Maecenas faucibus, enim non dapibus aliquet, odio velit dictum neque, vitae aliquam diam lacus nec massa. Integer a est malesuada, eleifend ipsum a, imperdiet magna. Proin velit erat, lobortis sit amet lorem id, mattis interdum tortor. Ut pharetra sapien sit amet lorem aliquam posuere. Donec efficitur posuere neque. Etiam ornare congue nisi id vehicula. Donec consectetur pretium dolor in dictum. Nam vestibulum eleifend sem, nec lacinia lacus aliquam et. Nulla in nisl magna. Integer id orci et magna tincidunt rhoncus. 
+Our experienced therapists work with you and your child to develop social interaction skills.  We use motivating activities to teach turn-taking, conversation, play and thinking about others.  We draw upon research-based interventions to support our therapy techniques. 
 """
 s.save()
 
-s = create_service('Speech Development', 4)  
+s = create_service('Receptive/Expressive Language Difficulties', 4)  
 s.menu = "Speech Development"
 s.description = """
-Nam nisi nunc, feugiat efficitur elit sed, tincidunt auctor ex. Suspendisse a dolor dui. Etiam consequat justo sodales tellus condimentum lacinia. Etiam non tortor ut massa euismod condimentum. Praesent sed quam porttitor, tristique massa eget, hendrerit magna. Curabitur efficitur vestibulum tempor. Fusce non magna consequat, eleifend lacus vel, pellentesque tortor. Vivamus auctor arcu est, at suscipit velit dictum vel. Aliquam erat volutpat. Ut congue consequat pharetra. Mauris in ornare odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget orci blandit, condimentum nulla nec, bibendum dui. 
+Language skills are the foundation of school success and effective self-expression. A strong vocabulary, the ability to understand what’s being said and to follow directions, and positive interactions are the basis for academic and social growth. We treat the language skills that affect a wide range of concerns, including autism, Down syndrome, learning disabilities, auditory processing, and language delays/disorders. Make an appointment for your free initial consult today.
 """
 s.save()
 
-s = create_service('Home School Resource', 5)  
+s = create_service('Augmentative and Alternative Communication (AAC)', 5)  
 s.menu = "Home School"
 s.description = """
-Quisque scelerisque sem non felis iaculis, quis molestie nibh scelerisque. Mauris non ipsum elit. Donec non felis urna. Sed finibus euismod ullamcorper. Integer elementum at elit eget egestas. Aliquam pharetra risus cursus interdum volutpat. Integer luctus dignissim elit vitae dapibus. Pellentesque id finibus massa, vel fermentum nunc. Aliquam molestie ipsum et placerat tincidunt. Nullam sit amet sagittis magna. Nam convallis risus ut dui facilisis euismod. Phasellus at risus sit amet turpis commodo lobortis. Phasellus eget scelerisque arcu, et placerat tellus. Vestibulum quis leo a eros malesuada consectetur et et sem. Proin quis tempus lacus. 
+We offer assessment and ongoing therapy for individuals who can benefit from both low and high tech augmentative and alternative communication (AAC) systems. In addition, we have access to assistive technology that can be used for reading and writing. Our therapists work closely with families to determine the most effective methods to assist the child’s communication.
 """
 s.save()
 
-s = create_service('Late Talkers', 6)  
-s.menu = "Late Talkers"
+s = create_service('Bilingual Therapy', 6)  
 s.description = """
-Nam convallis dui felis, vehicula molestie neque tincidunt non. Maecenas sodales dui quis augue accumsan, hendrerit porta justo efficitur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis efficitur est, nec accumsan quam elementum quis. Nam quis ante dictum, interdum quam nec, ullamcorper libero. Morbi vestibulum mi vitae urna consectetur, at egestas tortor ornare. Nam posuere, odio vel viverra tincidunt, quam sapien mollis orci, a egestas ex ex at ligula. Fusce dictum congue turpis a facilisis. Fusce at augue rutrum, egestas risus quis, condimentum ante. Sed sit amet diam ac ex bibendum lacinia interdum id neque. Quisque in iaculis lectus. Nunc sed elit mi. Proin elementum risus et felis placerat varius. 
+<span lang="es">Habla bien su hijo? La gente le entiende cuando habla? El nino comprende lo que le dicen los demas? Ofrecemos evaluaciones y terapia en espanol para problemas del habla y para mejorar la comunicacion y la comprension. La consulta inicial es gratis.</span>
+We offer a variety of speech and language services in Spanish, including therapy for speech sound errors, language comprehension, expression, and social skills. As always, our initial consult is free. In addition, bilingual speech-language evaluations are available to individuals and school districts.
 """
 s.save()
 
+s = create_service('School Services', 7)  
+s.description = """
+Are you a school district looking for help? We offer small contracts for school-based speech-language therapy. We are also available for individual speech-language evaluations in English and Spanish.
+"""
+s.save()

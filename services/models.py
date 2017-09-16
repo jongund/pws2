@@ -1,6 +1,8 @@
 import datetime
 
 from django.db import models
+from utils import text_to_paragraphs
+
 
 # Create your models here.
 
@@ -26,7 +28,7 @@ class Service(models.Model):
   def save(self):
   
     if self.description:  
-      self.description_html = self.description
+      self.description_html = text_to_paragraphs(self.description)
       self.short_desc_html  = self.description[:128]
             
     super(Service, self).save() # Call the "real" save() method.  

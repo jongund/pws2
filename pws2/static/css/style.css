@@ -306,7 +306,8 @@ transition:all .25s ease
 }
 .thumb-box1 {
 	padding:360px 0 23px;
-	background:url(../img/bg_pic.jpg) no-repeat;
+	background:url(../img/bg_pic1.jpg) no-repeat;
+	background-position: 80% 30%;			
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	box-sizing:border-box
@@ -567,11 +568,11 @@ transition:all .25s
 .thumb-pad1 figure {
 	margin:0 0 30px;
 	padding:0;
-	-webkit-box-shadow:0 0 5px 0 rgba(0, 0, 0, .16);
-	box-shadow:0 0 5px 0 rgba(0, 0, 0, .16)
 }
 .thumb-pad1 figure img {
-	width:100%
+	width:50%;
+	-webkit-box-shadow:0 0 5px 0 rgba(0, 0, 0, .16);
+	box-shadow:0 0 5px 0 rgba(0, 0, 0, .16)
 }
 .thumb-pad2 {
 	margin:0 0 30px;
@@ -592,11 +593,11 @@ transition:all .25s
 .thumb-pad2 figure {
 	margin:0;
 	position:relative;
-	-webkit-box-shadow:0 0 2px 0 rgba(0, 0, 0, .16);
-	box-shadow:0 0 2px 0 rgba(0, 0, 0, .16)
 }
 .thumb-pad2 figure img {
-	width:100%
+	width:50%;
+	-webkit-box-shadow:0 0 5px 0 rgba(0, 0, 0, .16);
+	box-shadow:0 0 5px 0 rgba(0, 0, 0, .16)
 }
 .thumb-pad2 figure i {
 	width:100%;
@@ -674,6 +675,12 @@ transition:all .25s
 	-webkit-box-shadow:0 0 5px 0 rgba(0, 0, 0, .16);
 	box-shadow:0 0 5px 0 rgba(0, 0, 0, .16)
 }
+
+.thumb-pad3 figure a:focus,
+.thumb-pad3 figure a:hover {
+	border: thin solid #555;
+}
+
 .thumb-pad4 {
 	margin:0;
 	padding:0;
