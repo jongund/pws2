@@ -19,7 +19,7 @@
                     <div class="extra-wrap">
                         <figure><img src="{% static 'img/schedule_small.png' %}" alt=""></figure>                    
                         <a href="{% url 'show_services' %}#id_flex">Flexible Scheduling</a>
-                        <p>We work with your family schedule</p>
+                        <p>We work with your family's schedule</p>
                     </div>
                 </div>
             </div>
@@ -80,8 +80,8 @@
                     <h2>Our Therapists</h2>
                     <div class="row">
                         {% for p in people %}
-                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 wow fadeIn" data-wow-delay="0.3s">
+                        <div class="col-lg-1 col-md-1 col-sm-3 col-xs-1"></div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-10 wow fadeIn" data-wow-delay="0.3s">
                             <div class="thumb-pad1">
                                 <div class="thumbnail">
                                     <figure><img src="{% static p.picture %}" alt="" width="25%"></figure>
@@ -93,7 +93,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+                        <div class="col-lg-1 col-md-1 col-sm-3 col-xs-1"></div>
                         {% endfor %}
                     </div>
                 </div>
