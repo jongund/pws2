@@ -5,38 +5,47 @@
 
 <!--content-->
 
-<div class="content" style="padding-top: 8em"> 
+<div class="content" style="padding-top: 10em"> 
+    <div class="thumb-box8">
+        <div class="container">
+            <div class="row programs">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" >
+                  <div class="box">
+                    <figure style="text-align: center"><img src="{% static 'img/phone2_small.png' %}" alt=""></figure>
+                    <div>
+                      <h2 style="margin-top: 0.25em; margin-bottom: 0">Free Consultation</h2>
+                      <p style="padding-top: 0.25em; font-size: 160%; text-align: center"><a href="tel:{{businessinfo.phone_href}}">{{businessinfo.phone}}</a></p>
+                      <p style="text-align: left">
+  We offer an initial free consult prior to beginning therapy. The consult lasts about 20 minutes and gives us a chance to get to know each other and to learn more about your concerns for your child. Come in and meet our staff of talented therapists! Call today to set up your free consult.
+                      </p>
+                    </div>
+                  </div>              
+                </div>                
+
+
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 wow fadeInRight" >
+                  <div class="box">
+                      <figure style="text-align: center"><img src="{% static 'img/schedule_small.png' %}" alt=""></figure>
+                      <div>
+                          <h2 style="margin-top: 0.25em;">Flexible Scheduling</h2>
+                          <p style="text-align: left">
+    We realize that families’ schedules often change from month to month. We work with you and do our best to accommodate your busy lifestyle. This might mean flexible appointments or therapy in your child’s school or daycare. At Prairie Wind, you are not locked in to a rigid schedule. Call today and let’s talk about how we can work with you.
+
+                          </p>
+                      </div>
+                  </div>              
+                </div>
+
+
+            </div>
+        </div>    
+    </div>
+</div>            
+
+<div class="content"> 
     <div class="thumb-box2">
         <div class="container">
             <h1 class="title wow fadeIn">Our Services</h1>
-
-            <div class="row programs">
-
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" style="margin-bottom: 2em">
-                  <div class="box">
-                                <figure><img src="{% static 'img/phone2_small.png' %}" alt=""></figure>
-                                <div>
-                                  <h2 style="margin-bottom: 0">Free Consultation</h2>
-                                  <p style="font-size: 150%"><a href="tel:{{businessinfo.phone_href}}">{{businessinfo.phone}}</a></p>
-                                  <p style="text-align: left">
-              We offer an initial free consult prior to beginning therapy. The consult lasts about 20 minutes and gives us a chance to get to know each other and to learn more about your concerns for your child. Come in and meet our staff of talented therapists! Call today to set up your free consult.
-                                  </p>
-                                </div>
-                  </div>              
-                </div>
-
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" style="margin-bottom: 2em">
-                  <div class="box">
-                                <figure><img src="{% static 'img/schedule_small.png' %}" alt=""></figure>
-                                <div>
-                                    <h2>Flexible Scheduling</h2>
-                                    <p style="text-align: left">
-              We offer an initial free consult prior to beginning therapy. The consult lasts about 20 minutes and gives us a chance to get to know each other and to learn more about your concerns for your child. Come in and meet our staff of talented therapists! Call today to set up your free consult.
-                                    </p>
-                                </div>
-                  </div>              
-                </div>
-            </div>
 
             <div class="row programs">
                 {% for p in programs %}

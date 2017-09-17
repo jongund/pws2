@@ -22,7 +22,7 @@ body {
 	background:#24252b;
 	font:13px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	line-height:1.428571429;
-	color:#999
+	color:#555;
 }
 a {
 	text-decoration:none;
@@ -80,7 +80,7 @@ h3 {
 h4 {
 	font:26px/1em Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	margin:0 0 32px;
-	color:#999
+	color:#555
 }
 .extra-wrap {
 	overflow:hidden
@@ -401,7 +401,7 @@ transition:all .25s
 	margin-bottom:13px
 }
 .thumb-box2 .box p {
-	color:#999;
+	color:#555;
 	margin-bottom:24px
 }
 .thumb-box2 .col-lg-3 {
@@ -464,7 +464,7 @@ transition:all .25s
 	margin-bottom:12px
 }
 .thumb-box5 p {
-	color:#999
+	color:#555
 }
 .thumb-box5 .col-lg-6 {
 	margin-bottom:31px
@@ -1243,7 +1243,7 @@ transition:all .25s
 	border-radius:5px;
 	border:1px solid #fff;
 	font:14px/18px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color:#999;
+	color:#555;
 	padding:8px 14px;
 	height:36px;
 	resize:none;
@@ -1290,7 +1290,7 @@ transition:all .25s
 	text-align:center;
 	border:1px solid #fff;
 	font:14px/18px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color:#999;
+	color:#555;
 	padding:8px 14px;
 	background:#fff;
 	height:36px;
@@ -1319,7 +1319,7 @@ transition:all .25s
 	height:64px;
 	line-height:18px;
 	border-radius:0;
-	color:#999;
+	color:#555;
 	padding:20px 14px;
 	resize:none
 }
@@ -1406,7 +1406,7 @@ transition:all .25s
 	color:#333
 }
 .mail {
-	color:#999;
+	color:#555;
 	font:13px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-decoration:underline;
 -webkit-transition:all .25s;
@@ -1633,4 +1633,8 @@ width:100%;
 float:none
 }
 }
-s
+
+.directions {
+	margin-top: -1em;
+	font-size: 120%;
+}

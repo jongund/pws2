@@ -66,7 +66,10 @@
         <div class="thumb-box4" style="margin-top: 3em">
             <div class="container">
                 <div class="box">
-                    <p class="title">Our team is 100% committed to help your child improve their communication.</p>
+                    <h2 class="title">Testimonitals</h2>
+                    {% for t in testimonials %}
+                    <p><em>"{{t.quote}}"<em></p>
+                    {% endfor %}
                 </div>
             </div>
         </div>

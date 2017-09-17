@@ -1,10 +1,11 @@
 from django.shortcuts import render
 
-from .models           import BusinessInformation
-from insurance.models  import InsuranceCompany
-from people.models     import Person
-from programs.models   import Program
-from services.models   import Service
+from .models              import BusinessInformation
+from insurance.models     import InsuranceCompany
+from people.models        import Person
+from programs.models      import Program
+from services.models      import Service
+from testimonials.models  import Testimonial
 
 # Abouts View
 # -----------------------------------------------------------------------------
@@ -17,14 +18,16 @@ def show_home(request):
     people        = Person.objects.all()
     programs      = Program.objects.all()
     services      = Service.objects.all()
+    testimonials  = Testimonial.objects.all()
 
     context = {
-          'user'        : user,          
-          'businessinfo': businessinfo,      
-          'isurance'    : insurance,
-          'people'      : people,
-          'programs'    : programs,
-          'services'    : services
+          'user'         : user,          
+          'businessinfo' : businessinfo,      
+          'isurance'     : insurance,
+          'people'       : people,
+          'programs'     : programs,
+          'services'     : services,
+          'testimonials' : testimonials
       }
     return render(request, 'show_home.html', context)  
 

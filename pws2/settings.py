@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'people',
     'programs',
     'services',
+    'testimonials',
 ]
 
 MIDDLEWARE = [
@@ -119,5 +120,10 @@ STATIC_URL = '/static/'
 # Example: "/home/media/media.lawrence.com/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
+print('STATIC_ROOT: ' + STATIC_ROOT)
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "pws2/static/"),
+]
 
 from pws2.settings_local import *

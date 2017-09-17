@@ -14,10 +14,10 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wow fadeInRight" data-wow-delay="0.2s" style="margin-bottom: 2em">
                     <div class="box maxheight"  >
                       <h2 id="id_address" style="margin-bottom: 0.5em; padding-bottom: 0;">Address</h2>
-                      <div style="color: #555; font-size: 120%">{{businessinfo.business_title}}</div>
-                      <div style="color: #555; font-size: 120%">{{businessinfo.street}}</div>
-                      <div style="color: #555; font-size: 120%">{{businessinfo.city}}, {{businessinfo.state}}  {{businessinfo.zip}}</div>
-                      <div style="color: #555; font-size: 120%"><a href="tel:{{businessinfo.phone_href}}">{{businessinfo.phone}}</a></div>
+                      <div style="font-size: 120%">{{businessinfo.business_title}}</div>
+                      <div style="font-size: 120%">{{businessinfo.street}}</div>
+                      <div style="font-size: 120%">{{businessinfo.city}}, {{businessinfo.state}}  {{businessinfo.zip}}</div>
+                      <div style="font-size: 120%"><a href="tel:{{businessinfo.phone_href}}">{{businessinfo.phone}}</a></div>
                     </div>
                 </div>
             </div>
@@ -26,7 +26,9 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wow fadeInLeft" data-wow-delay="0.2s" style="margin-bottom: 2em">
                     <div class="box maxheight"  >
                       <h2 id="id_directions" >Directions</h2>
+                      <div class="directions">
                       {{businessinfo.directions_html|safe}}
+                      </div>
                     </div>
                 </div>
             </div>
