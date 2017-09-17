@@ -7,26 +7,25 @@
 <div class="content" style="padding-top: 8em;"> 
     <div class="thumb-box2">
         <div class="container">
-            <div class="box">
-                <h1 class="title wow fadeIn">Our Therapists</h1>
-                {% for p in people %}
-                <div class="row">
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-2"></div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-8 wow fadeIn" data-wow-delay="0.3s">
-                        <div class="thumb-pad1">
-                            <div id="id_person{{p.id}}" class="thumbnail">
-                                <figure><img src="{% static p.picture %}" alt="" width="25%"></figure>
-                                <div class="caption">
-                                    <h2 style="font-size: 110%; margin-bottom: 0.5em">{{p.first_name}} {{p.last_name}} {{p.suffix}}</h2>
-                                    <span>{{p.title}}</span>
-                                    {{p.description_html|safe}}
-                                </div>  
-                            </div>
+            <h1 class="title wow fadeIn">Our Therapists</h1>
+
+            <div class="row programs">
+            {% for p in people %}
+                <div class="col-lg-1 col-md-1 col-sm-3 col-xs-1"></div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-10 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="thumb-pad1">
+                        <div id="id_person{{p.id}}" class="thumbnail">
+                            <figure><img src="{% static p.picture %}" alt="" width="25%"></figure>
+                            <div class="caption">
+                                <h2 style="font-size: 110%; margin-bottom: 0.5em">{{p.first_name}} {{p.last_name}} {{p.suffix}}</h2>
+                                <span class="title">{{p.title}}</span>
+                                {{p.description_html|safe}}
+                            </div>  
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-2"></div>
                 </div>
-                {% endfor %}
+                <div class="col-lg-1 col-md-1 col-sm-3 col-xs-1"></div>
+            {% endfor %}
             </div>
         </div>
     </div>

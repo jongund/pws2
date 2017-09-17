@@ -47,7 +47,13 @@ a:focus {
   text-decoration: underline;
 }
 
+.thumb-pad1 .thumbnail span.title {
+  color: #555;
+}
 
+.thumbnail .caption {
+  color: #333;
+}
 
 </style>
 
@@ -138,7 +144,7 @@ for (var i = 0; i < links.length; i++) {
 <!--footer-->
 <footer>
     <div class="container">
-        <p><a href="{% url 'show_home' %}">{{businessinfo.business_title}}</a> &copy; <em id="copyright-year"></em> All Rights Reserved &nbsp;&nbsp;|&nbsp;&nbsp; 1803 Woodfield Drive, Suite C, Savoy, IL &nbsp;&nbsp;|&nbsp;&nbsp; <a href="tel:1-217-355-5905">(217) 355-5905</a> </p>
+        <p><a href="{% url 'show_home' %}">{{businessinfo.business_title}}</a> &copy; <em id="copyright-year"></em> All Rights Reserved &nbsp;&nbsp;|&nbsp;&nbsp; 1803 Woodfield Drive, Suite C, Savoy, IL &nbsp;&nbsp;|&nbsp;&nbsp; <a href="tel:{{businessinfo.phone_href}}">{{businessinfo.phone}}</a> </p>
     </div>
 </footer>
 <script src="{% static 'js/bootstrap.min.js' %}"></script>

@@ -86,8 +86,8 @@
                                 <div class="thumbnail">
                                     <figure><img src="{% static p.picture %}" alt="" width="25%"></figure>
                                     <div class="caption">
-                                        <span>{{p.title}}</span>
                                         <a href="{% url 'show_people' %}#id_person{{p.id}}">{{p.first_name}} {{p.last_name}} {{p.suffix}}</a>
+                                        <span class="title">{{p.title}}</span>
                                         <p>{{p.short_desc_html|safe}} .....</p>
                                     </div>  
                                 </div>

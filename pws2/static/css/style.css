@@ -141,6 +141,7 @@ nav.tm_navbar li a {
 	font:14px/36px 'Droid Serif';
 	color:#333;
 	background:0 0;
+	border: thin solid transparent;
 -webkit-transition:all .25s;
 -o-transition:all .25s;
 transition:all .25s
@@ -1637,4 +1638,8 @@ float:none
 .directions {
 	margin-top: -1em;
 	font-size: 120%;
+}
+
+.thumbnail .caption {
+	color: #555;
 }
