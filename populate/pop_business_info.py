@@ -44,6 +44,7 @@ bi.state             = "IL"
 bi.zip               = "61874"
 
 bi.phone             = "(217) 355-5905"
+bi.phone_href        = "1-217-355-5905"
 bi.fax               = "(217) 666-2008"
 bi.email             = "info@prairiewindspeech.com"
 

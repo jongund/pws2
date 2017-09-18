@@ -14,9 +14,10 @@ class BusinessInformation(models.Model):
   state   = models.CharField(max_length=64)
   zip     = models.CharField(max_length=16)
 
-  phone  = models.CharField(max_length=256)
-  fax    = models.CharField(max_length=256)
-  email  = models.CharField(max_length=256)
+  phone       = models.CharField(max_length=256)
+  phone_href  = models.CharField(max_length=256,default="")
+  fax         = models.CharField(max_length=256,default="")
+  email       = models.CharField(max_length=256)
 
   facebook    = models.URLField(null=True,blank=True)
   linkedin    = models.URLField(null=True,blank=True)
