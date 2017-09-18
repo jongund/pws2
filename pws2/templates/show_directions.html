@@ -17,9 +17,10 @@
                       <div style="font-size: 120%">{{businessinfo.business_title}}</div>
                       <div style="font-size: 120%">{{businessinfo.street}}</div>
                       <div style="font-size: 120% ">{{businessinfo.city}}, {{businessinfo.state}}  {{businessinfo.zip}}</div>
-                      <div style="font-size: 120%;padding-top: 0.5em; padding-bottom: 0.5em"><a href="tel:{{businessinfo.phone_href}}">{{businessinfo.phone}}</a></div>
+                      <div style="font-size: 120%;padding-top: 0.5em;">Voice: <a href="tel:{{businessinfo.phone_href}}">{{businessinfo.phone}}</a></div>
+                      <div style="font-size: 120%;padding-top: 0.5em; padding-bottom: 0.5em">Fax: {{businessinfo.fax}}</div>
                       <script>
-                        document.write('<div style="font-size: 120%"><a href="mailto:');
+                        document.write('<div style="font-size: 120%">E-mail: <a href="mailto:');
                         document.write('{{businessinfo.email}}');
                         document.write('">{{businessinfo.email}}</a></div>');
                       </script>
