@@ -17,7 +17,7 @@ def show_home(request):
     insurance     = InsuranceCompany.objects.all()
     people        = Person.objects.all()
     programs      = Program.objects.all()
-    services      = Service.objects.all()
+    services      = Service.objects.filter(special=True)
     testimonials  = Testimonial.objects.all()
 
     context = {

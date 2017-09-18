@@ -13,11 +13,16 @@
             <div class="row programs">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wow fadeInRight" data-wow-delay="0.2s" style="margin-bottom: 2em">
                     <div class="box maxheight"  >
-                      <h2 id="id_address" style="margin-bottom: 0.5em; padding-bottom: 0;">Address</h2>
+                      <h2 id="id_address" style="margin-bottom: 0.5em; padding-bottom: 0;">Address and Contact</h2>
                       <div style="font-size: 120%">{{businessinfo.business_title}}</div>
                       <div style="font-size: 120%">{{businessinfo.street}}</div>
-                      <div style="font-size: 120%">{{businessinfo.city}}, {{businessinfo.state}}  {{businessinfo.zip}}</div>
-                      <div style="font-size: 120%"><a href="tel:{{businessinfo.phone_href}}">{{businessinfo.phone}}</a></div>
+                      <div style="font-size: 120% ">{{businessinfo.city}}, {{businessinfo.state}}  {{businessinfo.zip}}</div>
+                      <div style="font-size: 120%;padding-top: 0.5em; padding-bottom: 0.5em"><a href="tel:{{businessinfo.phone_href}}">{{businessinfo.phone}}</a></div>
+                      <script>
+                        document.write('<div style="font-size: 120%"><a href="mailto:');
+                        document.write('{{businessinfo.email}}');
+                        document.write('">{{businessinfo.email}}</a></div>');
+                      </script>
                     </div>
                 </div>
             </div>

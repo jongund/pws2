@@ -47,9 +47,9 @@
         <div class="container">
             <h1 class="title wow fadeIn">Our Services</h1>
 
+            {% for p in programs %}
+            {% if p.show %}
             <div class="row programs">
-                {% for p in programs %}
-                {% if p.show %}
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wow fadeInRight" data-wow-delay="0.2s">
                     <div class="box">
                       <h2 id="#id_program{{p.id}}">{{p.title}}</h2>
@@ -58,13 +58,19 @@
                       </div>
                     </div>
                 </div>
-                {% endif  %}
-                {% endfor %}
             </div>
+            {% endif  %}
+            {% endfor %}
 
+            {% for s in services %}
+            {% if not forloop.counter|divisibleby:2 %}
             <div class="row programs">
-                {% for s in services %}
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" style="margin-bottom: 2em">
+            {% endif %}
+                {% if not forloop.counter|divisibleby:2 %}
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-delay="0.2s" style="margin-top: 2em">
+                {% else %}
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay="0.2s" style="margin-top: 2em">
+                {% endif %}    
                     <div id="id_service{{s.id}}" class="box maxheight">
                       <strong>{{s.title}}</strong>
                       <div style="text-align: left">
@@ -72,16 +78,28 @@
                       </div>
                     </div>
                 </div>
-                {% endfor %}
+            {% if forloop.counter|divisibleby:2 %}
             </div>
-
-
- 
-
-
+            {% endif %}
+            {% endfor %}
 
         </div>
     </div>
+
+    <div class="thumb-box4" style="margin-top: 3em">
+        <div class="container">
+            <div class="box insurance">
+              <h2 class="title">Insurance</h2>
+              <p>We are providers for some insurance companies doing business in the state of Illinois.  Contact us and we would be happy to assist you in determining if your policy has speech and language benefits and if prior authorization is required.</p>
+              <p>We are providers for the following insurance companies:</p>
+              <ul>
+              {% for i in insurance %}
+                <li>{{i.name}}</li>
+              {% endfor %}
+              </ul>
+            </div>
+        </div>
+    </div>    
 
 </div>    
 

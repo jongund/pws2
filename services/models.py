@@ -9,8 +9,9 @@ from utils import text_to_paragraphs
 class Service(models.Model):
   id = models.AutoField(primary_key=True)
   
-  title  = models.CharField(max_length=256)
-  order  = models.IntegerField(default=0)
+  title   = models.CharField(max_length=256)
+  order   = models.IntegerField(default=0)
+  special = models.BooleanField(default=False)
 
   description       = models.TextField(null=True,blank=True)
   description_html  = models.TextField(null=True,blank=True, editable=False)

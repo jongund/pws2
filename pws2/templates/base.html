@@ -67,6 +67,26 @@ a:focus {
   display: block;
 }
 
+.thumb-box4 .insurance h2 {
+  font-size: 170%;
+}
+
+.thumb-box4 .insurance p,
+.thumb-box4 .insurance ul {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-style: normal;
+  font-family: Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  color: #111;
+  margin-bottom: 1em;
+}
+
+.thumb-box4 .insurance ul {
+  margin: 0;
+  padding-left: 1.1em;
+}
 </style>
 
 <!--JS-->
@@ -125,7 +145,9 @@ a:focus {
                     <li><a href="{% url 'show_people'     %}">Therapists</a></li>
                     <li><a href="{% url 'show_services'   %}">Services</a></li>
                     <li><a href="{% url 'show_directions' %}">Location</a></li>
+                    <!--
                     <li><a href="{% url 'show_contact'    %}">Contact</a></li>
+                    -->
                 </ul>
             </nav>
         </div>

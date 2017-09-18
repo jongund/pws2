@@ -5,7 +5,7 @@
 <div class="thumb-box1">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 wow fadeInLeft" data-wow-delay="0.2s">
                 <div class="box">
                     <div class="extra-wrap">
                         <figure><img src="{% static 'img/phone2_small.png' %}" alt=""></figure>                    
@@ -14,7 +14,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.1s">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 wow fadeInRight" data-wow-delay="0.1s">
                 <div class="box">
                     <div class="extra-wrap">
                         <figure><img src="{% static 'img/schedule_small.png' %}" alt=""></figure>                    
@@ -47,10 +47,17 @@
                 {% endfor %}
             </div>
 
+            <h2>What Makes Us Special?</h2>
+
+            {% for s in services %}
+            {% if not forloop.counter|divisibleby:2 %}
             <div class="row programs">
-                <h2>What Makes Us Special?</h2>
-                {% for s in services %}
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-delay="0.2s" style="margin-top: 2em">
+            {% endif %}
+                {% if not forloop.counter|divisibleby:2 %}
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-delay="0.2s" style="margin-top: 2em">
+                {% else %}
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay="0.2s" style="margin-top: 2em">
+                {% endif %}    
                     <div class="box maxheight">
                       <strong>{{s.title}}</strong>
                       <p>{{s.short_desc_html|safe}}....</p>
@@ -59,14 +66,16 @@
                       </a>
                     </div>
                 </div>
-                {% endfor %}
+            {% if forloop.counter|divisibleby:2 %}
             </div>
+            {% endif %}
+            {% endfor %}
         </div>
 
         <div class="thumb-box4" style="margin-top: 3em">
             <div class="container">
                 <div class="box">
-                    <h2 class="title">Testimonitals</h2>
+                    <h2 class="title">Testimonials</h2>
                     {% for t in testimonials %}
                     <p><em>"{{t.quote}}"<em></p>
                     {% endfor %}
