@@ -97,7 +97,9 @@
                                     <div class="caption">
                                         <a href="{% url 'show_people' %}#id_person{{p.id}}">{{p.first_name}} {{p.last_name}} {{p.suffix}}</a>
                                         <span class="title">{{p.title}}</span>
-                                        <p>{{p.short_desc_html|safe}} .....</p>
+                                        <p style="margin-bottom: 1em">{{p.short_desc_html|safe}} .....</p>
+                      <a href="{% url 'show_people' %}#id_person{{p.id}}"class="btn-default btn1" data-text="Read More">
+                      Read More <span class="sr-only"> about {{p.first_name}} {{p.last_name}}</span></a>
                                     </div>  
                                 </div>
                             </div>

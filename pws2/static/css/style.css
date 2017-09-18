@@ -900,7 +900,7 @@ transition:all .25s
 	text-decoration:none;
 	margin:0;
 	padding:10px 28px;
-	border:0;
+	border: 1px solid transparent;
 	color:inherit;
 	vertical-align:middle;
 	font:14px/18px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
