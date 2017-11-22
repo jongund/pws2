@@ -8,7 +8,7 @@
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 wow fadeInLeft" data-wow-delay="0.2s">
                 <div class="box">
                     <div class="extra-wrap">
-                        <figure><img src="{% static 'img/phone2_small.png' %}" alt=""></figure>                    
+                        <figure><img src="{% static 'img/phone2_small.png' %}" alt=""></figure>
                         <a href="{% url 'show_services' %}#id_free">Free Consultation</a>
                         <p>Call us at <a href="tel:{{businessinfo.phone_href}}" style="font-size: 100%">{{businessinfo.phone}}</a> to schedule an appointment</p>
                     </div>
@@ -17,7 +17,7 @@
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 wow fadeInRight" data-wow-delay="0.1s">
                 <div class="box">
                     <div class="extra-wrap">
-                        <figure><img src="{% static 'img/schedule_small.png' %}" alt=""></figure>                    
+                        <figure><img src="{% static 'img/schedule_small.png' %}" alt=""></figure>
                         <a href="{% url 'show_services' %}#id_flex">Flexible Scheduling</a>
                         <p>We work with your family's schedule</p>
                     </div>
@@ -27,7 +27,7 @@
     </div>
 </div>
 <!--content-->
-<div class="content"> 
+<div class="content">
     <div class="thumb-box2">
         <div class="container">
             <h1 class="title wow fadeIn">Communication is Connection</h1>
@@ -57,7 +57,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-delay="0.2s" style="margin-top: 2em">
                 {% else %}
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay="0.2s" style="margin-top: 2em">
-                {% endif %}    
+                {% endif %}
                     <div class="box maxheight">
                       <strong>{{s.title}}</strong>
                       <p>{{s.short_desc_html|safe}}....</p>
@@ -100,7 +100,7 @@
                                         <p style="margin-bottom: 1em">{{p.short_desc_html|safe}} .....</p>
                       <a href="{% url 'show_people' %}#id_person{{p.id}}"class="btn-default btn1" data-text="Read More">
                       Read More <span class="sr-only"> about {{p.first_name}} {{p.last_name}}</span></a>
-                                    </div>  
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -127,10 +127,10 @@
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
                         <figure class="wow zoomIn" data-wow-delay="0.1s"><img src="{% static 'img/office-4-sm.jpg' %}" alt="Therapy room with bookstand and ramps and buildings for toy cars."></figure>
-                    </div>    
+                    </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
                         <figure class="wow zoomIn" data-wow-delay="0.1s"><img src="{% static 'img/office-5-sm.jpg' %}" alt="Therapy room with poster of Pete the Cat"></figure>
-                    </div>    
+                    </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
                         <figure class="wow zoomIn" data-wow-delay="0.1s"><img src="{% static 'img/office-6-sm.jpg' %}" alt="Therapy room with cubbie holes with toys."></figure>
                     </div>
@@ -144,7 +144,7 @@
             </div>
         </div>
     </div>
-</div>    
+</div>
 
 {% endblock %}
 
