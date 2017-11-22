@@ -41,9 +41,12 @@ INSTALLED_APPS = [
     'insurance',
     'people',
     'programs',
+    'resources',
     'services',
     'testimonials',
 ]
+
+print(INSTALLED_APPS)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

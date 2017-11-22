@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+
+<!--content-->
+
+<div class="content" style="padding-top: 8em;"> 
+    <div class="thumb-box2">
+        <div class="container">
+            <h1 class="title wow fadeIn">Community Resources</h1>
+
+            <div class="row programs">
+                <dl>
+                    {% for r in resources %}
+                    <dt><a href="{{r.url}}">{{r.resource_name}}</a></dt>
+                    {% empty %}
+                    <dt>No resources listed at this time, come back soon!</dt>
+                    {% endfor %}
+                </dl> 
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+

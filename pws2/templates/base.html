@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 <title>Home</title>
-<meta charset="utf-8">    
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" />
@@ -34,6 +34,10 @@ main .programs li {
     padding: 0;
     margin-left: 1em;
     text-align: left;
+}
+
+main a[href] {
+  text-decoration: underline;
 }
 
 nav a:focus {
@@ -91,6 +95,10 @@ a:focus {
   padding-left: 1.1em;
 }
 
+a.btn-default.btn1 {
+  font-family: Arial,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
 a.btn-default.btn1:focus {
   border-color: #555;
   background-color: #000;
@@ -105,11 +113,11 @@ a.btn-default.btn1:focus {
 <script src="{% static 'js/jquery-migrate-1.2.1.min.js' %}"></script>
 <script src="{% static 'js/jquery.easing.1.3.js'        %}"></script>
 <script src="{% static 'js/jquery.mobilemenu.js'        %}"></script>
-<script src="{% static 'js/jquery.equalheights.js'      %}"></script> 
+<script src="{% static 'js/jquery.equalheights.js'      %}"></script>
 <script src="{% static 'js/touchTouch.jquery.js'        %}"></script>
 <script src="{% static 'js/TMForm.js'                   %}"></script>
-<script src="{% static 'js/modal.js'                    %}"></script>  
-<script src="{% static 'js/bootstrap-filestyle.js'      %}"></script> 
+<script src="{% static 'js/modal.js'                    %}"></script>
+<script src="{% static 'js/bootstrap-filestyle.js'      %}"></script>
 <script src="{% static 'js/jquery.ui.totop.js'          %}"></script>
 
 
@@ -124,10 +132,10 @@ a.btn-default.btn1:focus {
 <script src="{% static 'js/wow/wow.js' %}"></script>
 <script src="{% static 'js/wow/device.min.js' %}"></script>
 <script>
-    $(document).ready(function () {       
+    $(document).ready(function () {
       if ($('html').hasClass('desktop')) {
         new WOW().init();
-      }   
+      }
     });
 </script>
 <!--<![endif]-->
@@ -155,6 +163,7 @@ a.btn-default.btn1:focus {
                     <li><a href="{% url 'show_home'       %}">Home</a></li>
                     <li><a href="{% url 'show_people'     %}">Therapists</a></li>
                     <li><a href="{% url 'show_services'   %}">Services</a></li>
+                    <li><a href="{% url 'show_insurance'  %}">Insurance</a></li>
                     <li><a href="{% url 'show_directions' %}">Location</a></li>
                     <!--
                     <li><a href="{% url 'show_contact'    %}">Contact</a></li>
