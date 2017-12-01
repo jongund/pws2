@@ -95,7 +95,7 @@
                                 <div class="thumbnail">
                                     <figure><img src="{% static p.picture %}" alt="" width="25%"></figure>
                                     <div class="caption">
-                                        <a href="{% url 'show_people' %}#id_person{{p.id}}">{{p.first_name}} {{p.last_name}} {{p.suffix}}</a>
+                                        <a href="{% url 'show_people' %}#id_person{{p.id}}" class="name">{{p.first_name}} {{p.last_name}} {{p.suffix}}</a>
                                         <span class="title">{{p.title}}</span>
                                         <p style="margin-bottom: 1em">{{p.short_desc_html|safe}} .....</p>
                       <a href="{% url 'show_people' %}#id_person{{p.id}}"class="btn-default btn1" data-text="Read More">
