@@ -475,7 +475,7 @@ transition:all .25s
 	padding:60px 0 5px
 }
 .thumb-box6 h2, .thumb-box6 h3, .thumb-box6 p {
-	color:#fff
+	color:#000;
 }
 .thumb-box6 figure {
 	position:relative;
@@ -907,7 +907,7 @@ transition:all .25s
 	position:relative;
 	z-index:1;
 	background:#fed136;
-	color:#fff;
+	color:#000;
 	border-radius:4px;
 	overflow:hidden;
 	-webkit-backface-visibility:hidden;
@@ -1633,11 +1633,6 @@ float:none
 width:100%;
 float:none
 }
-}
-
-.directions {
-	margin-top: -1em;
-	font-size: 120%;
 }
 
 .thumbnail .caption {
