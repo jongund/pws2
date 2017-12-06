@@ -360,8 +360,8 @@ transition:all .4s ease
 .thumb-box1 .extra-wrap.indent {
 	padding-top:5px
 }
-.thumb-box1 a.title {
-	padding-bottom: 1em;
+.thumb-box1 .title {
+	margin-bottom: 1em;
 	font:24px/1em 'Droid Serif';
 	color:#333;
 	display: block;
@@ -389,7 +389,7 @@ transition:all .25s
 }
 .thumb-box2 .title {
 	color:#333;
-	font:18px/1em 'Droid Serif';
+	font:36px/1em 'Droid Serif';
 	margin-bottom:23px
 }
 .thumb-box2 .description {
