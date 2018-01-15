@@ -8,7 +8,7 @@
 <div class="content" style="padding-top: 10em">
     <div class="thumb-box2">
         <div class="container">
-            <h1 class="title">Insurance</h1>
+            <h1 class="title wow fadin">Insurance</h1>
         </div>
     </div>
 </div>
@@ -16,16 +16,20 @@
 <div class="content" style="padding-bottom: 10em">
     <div class="thumb-box4">
         <div class="container">
-            <div class="box insurance" style="font-size: 150%">
-              <p>We are in-network providers for many insurance companies in the state of Illinois.  </p>
-                <p>Contact us at <a href="tel:{{businessinfo.phone_href}}" style="font-size: 100%;">{{businessinfo.phone}}</a> and we would be happy to assist you in determining if your policy has speech and language benefits and if prior authorization is required.</p>
-              <p>We are providers for the following insurance companies:</p>
-              <ul>
-              {% for i in insurance %}
-                <li>{{i.name}}</li>
-              {% endfor %}
-              </ul>
-            </div>
+            <div class="row programs">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wow fadeIn" >
+                  <div class="box insurance" style="font-size: 150%">
+                    <p>We are in-network providers for many insurance companies in the state of Illinois.  </p>
+                      <p>Contact us at <a href="tel:{{businessinfo.phone_href}}" style="font-size: 100%;">{{businessinfo.phone}}</a> and we would be happy to assist you in determining if your policy has speech and language benefits and if prior authorization is required.</p>
+                    <p>We are providers for the following insurance companies:</p>
+                    <ul>
+                    {% for i in insurance %}
+                      <li>{{i.name}}</li>
+                    {% endfor %}
+                    </ul>
+                  </div>
+                </div>
+              </div>
         </div>
     </div>
 </div>
