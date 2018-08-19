@@ -11,7 +11,7 @@
 
             {% for p in people %}
             {% if not forloop.counter|divisibleby:2 %}
-            <div class="row programs">
+            <div class="row">
             {% endif %}
                 {% if forloop.last %}
                 <div class="col-lg-4 col-md-4 col-sm-3 col-xs-1"></div>
@@ -19,7 +19,7 @@
                 <div class="col-lg-1 col-md-1 col-sm-3 col-xs-1"></div>
                 {% endif %}
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="thumb-pad1">
+                    <div class="thumb-pad1 person">
                         <div id="id_person{{p.id}}" class="thumbnail">
                             <figure><img src="{% static p.picture %}" alt="" width="25%"></figure>
                             <div class="caption">
