@@ -360,13 +360,21 @@ transition:all .4s ease
 .thumb-box1 .extra-wrap.indent {
 	padding-top:5px
 }
-.thumb-box1 a {
-	font:36px/1em 'Droid Serif';
+.thumb-box1 .title {
+	margin-bottom: 1em;
+	font:24px/1em 'Droid Serif';
 	color:#333;
+	display: block;
+	text-align: center;
 -webkit-transition:all .25s;
 -o-transition:all .25s;
 transition:all .25s
 }
+
+.thumb-box1 .desc {
+	font-size: 16px;
+}
+
 .thumb-box1 a:hover {
 	color:#fed136
 }
