@@ -98,8 +98,10 @@
             <div class="container">
                 <div class="box">
                     <h2>Our Therapists</h2>
+                    {% for p in people %}
+                    {% if not forloop.counter|divisibleby:2 %}
                     <div class="row">
-                        {% for p in people %}
+                    {% endif %}
                         <div class="col-lg-1 col-md-1 col-sm-3 col-xs-1"></div>
                         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-10 wow fadeIn" data-wow-delay="0.3s">
                             <div class="thumb-pad1">
@@ -109,15 +111,17 @@
                                         <a href="{% url 'show_people' %}#id_person{{p.id}}" class="name">{{p.first_name}} {{p.last_name}} {{p.suffix}}</a>
                                         <span class="title">{{p.title}}</span>
                                         <p style="margin-bottom: 1em">{{p.short_desc_html|safe}} .....</p>
-                      <a href="{% url 'show_people' %}#id_person{{p.id}}"class="btn-default btn1" data-text="Read More">
-                      Read More <span class="sr-only"> about {{p.first_name}} {{p.last_name}}</span></a>
+                                        <a href="{% url 'show_people' %}#id_person{{p.id}}"class="btn-default btn1" data-text="Read More">
+                                        Read More <span class="sr-only"> about {{p.first_name}} {{p.last_name}}</span></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-1 col-md-1 col-sm-3 col-xs-1"></div>
-                        {% endfor %}
+                    {% if forloop.counter|divisibleby:2 %}
                     </div>
+                    {% endif %}
+                    {% endfor %}
                 </div>
             </div>
         </div>
