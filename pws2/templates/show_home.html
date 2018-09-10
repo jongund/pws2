@@ -102,11 +102,7 @@
                     {% if not forloop.counter|divisibleby:2 %}
                     <div class="row">
                     {% endif %}
-                        {% if forloop.last %}
-                        <div class="col-lg-4 col-md-4 col-sm-3 col-xs-1"></div>
-                        {% else %}
                         <div class="col-lg-1 col-md-1 col-sm-3 col-xs-1"></div>
-                        {% endif %}
                         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-10 wow fadeIn" data-wow-delay="0.3s">
                             <div class="thumb-pad1">
                                 <div class="thumbnail">
@@ -121,11 +117,7 @@
                                 </div>
                             </div>
                         </div>
-                        {% if forloop.last %}
-                        <div class="col-lg-4 col-md-4 col-sm-3 col-xs-1"></div>
-                        {% else %}
                         <div class="col-lg-1 col-md-1 col-sm-3 col-xs-1"></div>
-                        {% endif %}
                     {% if forloop.counter|divisibleby:2 or forloop.last %}
                     </div>
                     {% endif %}
