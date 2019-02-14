@@ -307,8 +307,9 @@ transition:all .25s ease
 }
 .thumb-box1 {
 	padding:360px 0 23px;
-	background:url(../img/bg_pic1.jpg) no-repeat;
-	background-position: 80% 30%;
+	background-image:url('../img/background-1.png');
+	background-repeat: no-repeat;
+	background-position: center center;
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	box-sizing:border-box
