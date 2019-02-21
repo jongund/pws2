@@ -12,43 +12,14 @@
 <meta name="author" content="Your name">
 <meta name = "format-detection" content = "telephone=no" />
 <!--CSS-->
-<link rel="stylesheet" href="{% static 'css/bootstrap.css'      %}" >
-<link rel="stylesheet" href="{% static 'css/style.css'          %}">
-<link rel="stylesheet" href="{% static 'css/animate.css'        %}">
-<link rel="stylesheet" href="{% static 'css/touchTouch.css'     %}">
-<link rel="stylesheet" href="{% static 'css/pws2.css'           %}">
+<link rel="stylesheet" href="{% static 'css/bootstrap.css'          %}" >
+<link rel="stylesheet" href="{% static 'css/style.css'              %}">
+<link rel="stylesheet" href="{% static 'css/thumb1-background.css'  %}">
+<link rel="stylesheet" href="{% static 'css/animate.css'            %}">
+<link rel="stylesheet" href="{% static 'css/touchTouch.css'         %}">
+<link rel="stylesheet" href="{% static 'css/pws2.css'               %}">
 
 <link rel="stylesheet" href="{% static 'fonts/font-awesome.css' %}">
-
-<style id="ID_THUMB_BOX_1_STYLE">
-  .thumb-box1 {
-    background-image: url("{% static '/img/background-1.jpeg' %}");
-  }
-</style>
-
-<!--JS-->
-<script>
-
-    var backgroundImages = [];
-    backgroundImages.push("{% static '/img/background-1.jpeg' %}");
-    backgroundImages.push("{% static '/img/background-2.jpeg' %}");
-    backgroundImages.push("{% static '/img/background-3.jpeg' %}");
-    backgroundImages.push("{% static '/img/background-4.jpeg' %}");
-    backgroundImages.push("{% static '/img/background-5.jpeg' %}");
-    backgroundImages.push("{% static '/img/background-6.jpeg' %}");
-    backgroundImages.push("{% static '/img/background-7.jpeg' %}");
-    backgroundImages.push("{% static '/img/background-8.jpeg' %}");
-
-    var styleNode = document.getElementById('ID_THUMB_BOX_1_STYLE');
-    var index = Math.floor(Math.random() * backgroundImages.length);
-    var style = '';
-    style += '.thumb-box1 {\n';
-    style += '  background-image: url("' + backgroundImages[index] + '");\n';
-    style += '}\n';
-
-    styleNode.innerHTML=style;
-
-</script>
 
 <script src="{% static 'js/jquery.js' %}"></script>
 <script src="{% static 'js/jquery-migrate-1.2.1.min.js' %}"></script>
