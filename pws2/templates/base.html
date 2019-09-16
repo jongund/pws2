@@ -127,7 +127,16 @@ ga('send', 'pageview');
 
 </script>
 
+<script>
 
+  // choose random image for background of thumb1 section
+  var thumb1 = document.querySelector('.thumb-box1');
+
+  if (thumb1) {
+    thumb1.classList.add('background-' + (Math.floor(Math.random() * Math.floor(8) + 1)));
+  }
+
+</script>
 
 </body>
 </html>

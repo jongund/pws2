@@ -8,56 +8,35 @@
   box-sizing:border-box
 }
 
-@media screen and (max-width: 200px) {
-  .thumb-box1.background-1 {
-    background-image:url('../img/background-1-400.jpeg');
-  }
-}
-
-@media screen and (max-width: 250px) {
-  .thumb-box1.background-1 {
-    background-image:url('../img/background-1-400.jpeg');
-  }
-}
-
-@media screen and (max-width: 300px) {
-  .thumb-box1.background-1 {
-    background-image:url('../img/background-1-400.jpeg');
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .thumb-box1.background-1 {
-    background-image:url('../img/background-1-385.jpeg');
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .thumb-box1.background-1 {
-    background-image:url('../img/background-1-460.jpeg');
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .thumb-box1.background-1 {
-    background-image:url('../img/background-1-610.jpeg');
-  }
-}
-
-@media screen and (max-width: 750px) {
-  .thumb-box1.background-1 {
-    background-image:url('../img/background-1-760.jpeg');
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .thumb-box1.background-1 {
-    background-image:url('../img/background-1-910.jpeg');
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .thumb-box1.background-1 {
+.thumb-box1.background-1 {
     background-image:url('../img/background-1.jpeg');
-  }
 }
+
+.thumb-box1.background-2 {
+    background-image:url('../img/background-2.jpeg');
+}
+
+.thumb-box1.background-3 {
+    background-image:url('../img/background-3.jpeg');
+}
+
+.thumb-box1.background-4 {
+    background-image:url('../img/background-4.jpeg');
+}
+
+.thumb-box1.background-5 {
+    background-image:url('../img/background-5.jpeg');
+}
+
+.thumb-box1.background-6 {
+    background-image:url('../img/background-6.jpeg');
+}
+
+.thumb-box1.background-7 {
+    background-image:url('../img/background-7.jpeg');
+}
+
+.thumb-box1.background-8 {
+    background-image:url('../img/background-8.jpeg');
+}
+
